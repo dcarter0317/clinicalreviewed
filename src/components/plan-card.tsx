@@ -80,12 +80,12 @@ export default function PlanCard({
         </StatusPill>
       )}
 
-      <Heading className="m-0 font-heading text-h3 font-black text-ink-navy">{name}</Heading>
+      <Heading className="m-0 font-heading text-[1.1rem] font-black text-ink-navy">{name}</Heading>
       {frequency && (
-        <p className="m-0 mt-1 font-heading text-label-strong font-extrabold text-brand-primary-dark">{frequency}</p>
+        <p className="m-0 mt-1 font-heading text-[0.72rem] font-extrabold text-brand-primary-dark">{frequency}</p>
       )}
 
-      <p className="m-0 my-lg font-heading text-[2.3rem] font-black leading-none text-ink-navy">
+      <p className="m-0 my-lg font-heading text-[2rem] font-black leading-none text-ink-navy">
         {typeof price === 'number' ? `$${price}` : price}
         <span className="text-[0.85rem] font-normal text-ink-body">{period}</span>
       </p>
@@ -94,7 +94,7 @@ export default function PlanCard({
         {features.map((feature, i) => (
           <li
             key={i}
-            className="border-b border-dashed border-border-line py-sm font-body text-body-base leading-snug text-ink-body last:border-b-0"
+            className="border-b border-dashed border-border-line py-sm font-body text-[0.8rem] leading-snug text-ink-body last:border-b-0"
           >
             <FontAwesomeIcon icon={faCheck} aria-hidden="true" className="mr-1.5 text-brand-primary" />
             {feature}

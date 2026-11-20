@@ -31,11 +31,11 @@ export default function TestimonialCard({ quote, name, role, rating = 5, classNa
   return (
     <figure
       {...rest}
-      className={cx('relative m-0 flex h-full flex-col overflow-hidden rounded-card bg-surface-tint p-xl text-left', className)}
+      className={cx('relative m-0 flex h-full flex-col overflow-hidden rounded-card bg-surface-tint p-xl pt-[3.5rem]! text-left', className)}
     >
       <span
         aria-hidden="true"
-        className="pointer-events-none absolute -top-4 left-3 select-none font-heading text-[7rem] leading-none font-black text-brand-primary-light/40"
+        className="pointer-events-none absolute top-1 left-4 select-none font-heading text-[7rem] leading-none font-black text-brand-primary-light/40"
       >
         “
       </span>
@@ -91,7 +91,7 @@ const columnClasses: Record<GridColumns, string> = {
  * of the tallest one (auto-rows-fr equalises rows, h-full stretches each card).
  */
 export function TestimonialCardGrid({ items, columns, className, ...rest }: TestimonialCardGridProps) {
-  const cols = columns ?? (Math.min(Math.max(items.length, 1), 3) as GridColumns)
+  const cols = columns ?? (Math.min(Math.max(items.length, 1), 2) as GridColumns)
   return (
     <div {...rest} className={cx('grid auto-rows-fr items-stretch gap-lg', columnClasses[cols], className)}>
       {items.map(({ id, ...item }) => (
