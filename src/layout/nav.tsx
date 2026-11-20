@@ -1,5 +1,10 @@
+import { NavList } from '../components/nav'
+import { navItems } from '../data/nav'
+
 export default function Nav() {
   return (
-     <p>nav</p>
+    <nav className="nav" aria-label="Primary">
+      <NavList items={navItems} />
+    </nav>
   )
 }

@@ -3,7 +3,7 @@ import { services } from '../data/services'
 
 export default function Services() {
   return (
-    <section className="services px-xl py-section-md">
+    <section id="services" className="services px-xl py-section-md">
       <div className="services-content">
         <ServiceCardGrid items={services} />
       </div>

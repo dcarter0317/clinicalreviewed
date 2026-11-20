@@ -1,6 +1,13 @@
 @import "tailwindcss";
 @import "./theme.css";
 
+/* Smooth in-page anchor scrolling (nav links, #plans, #contact), skipped for reduced-motion users. */
+@media (prefers-reduced-motion: no-preference) {
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
 :root {
   --text: #6b6375;
   --text-h: #08060d;
@@ -56,8 +63,7 @@
 */
 
 #root {
-  width: 1126px;
-  max-width: 100%;
+  @apply w-full max-w-7xl;
   margin: 0 auto;
   text-align: center;
   border-inline: 1px solid var(--border);

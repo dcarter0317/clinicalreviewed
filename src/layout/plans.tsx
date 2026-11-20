@@ -1,6 +1,6 @@
 export default function Plans() {
     return ( 
-        <section className="plans">
+        <section id="plans" className="plans">
             <div className="plans-content"> 
                 <p>Plans</p>
             </div>
