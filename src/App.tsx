@@ -1,7 +1,6 @@
 import Topbar from './layout/topbar';
-import Nav from './layout/nav';
-import Header from './layout/header'
-import Hero from './layout/hero'
+import NavBar from './layout/navbar';
+import Hero from './layout/hero';
 import About from './layout/about';
 import Services from './layout/services';
 import Testimonials from './layout/testimonials';
@@ -18,8 +17,7 @@ function App() {
   return (
     <>
       <Topbar />
-      <Nav />
-      <Header />
+      <NavBar />
       <Hero />
       <About />
       <Services />

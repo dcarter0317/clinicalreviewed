@@ -3,7 +3,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 export default function Topbar() {
   return (
-    <header className="topbar flex items-center justify-between bg-ink-navy text-brand-primary p-4">
+    <header className="topbar text-sm flex items-center justify-around md:justify-between md:px-8 bg-ink-navy text-surface-tint-deep p-4">
       <div className="hidden md:block">
         <p>
           <FontAwesomeIcon icon={faLocationDot} aria-hidden="true" className="mr-2" />

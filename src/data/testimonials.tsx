@@ -7,9 +7,27 @@ import type { TestimonialCardItem } from '../components/testimonial-card'
  */
 export const testimonials: TestimonialCardItem[] = [
   {
-    id: 'pediatric-westchester',
-    quote: 'The local touch is what surprised us. New families keep telling us they found us through an article.',
-    name: 'Practice Manager',
-    role: 'Pediatric Dentistry · Westchester, NY',
+    id: "General-Cosmetic-Dentistry",
+    quote: "I used to cringe reading the blogs our old agency posted under my name, half of it wasn't even clinically right. Now every article comes back with a dentist's sign-off before it publishes. I finally stopped proofreading my own marketing.",
+    name: "Dr. A. Rivera, DDS",
+    role: "General & Cosmetic Dentistry · Brooklyn, NY)",
+  },
+  {
+    id: "General-Cosmetic-Dentistry",
+    quote: "I used to cringe reading the blogs our old agency posted under my name, half of it wasn't even clinically right. Now every article comes back with a dentist's sign-off before it publishes. I finally stopped proofreading my own marketing.",
+    name: "Dr. A. Rivera, DDS",
+    role: "General & Cosmetic Dentistry · Brooklyn, NY)",
+  },
+  {
+    id: "General-Cosmetic-Dentistry",
+    quote: "I used to cringe reading the blogs our old agency posted under my name, half of it wasn't even clinically right. Now every article comes back with a dentist's sign-off before it publishes. I finally stopped proofreading my own marketing.",
+    name: "Dr. A. Rivera, DDS",
+    role: "General & Cosmetic Dentistry · Brooklyn, NY)",
+  },
+  {
+    id: "General-Cosmetic-Dentistry",
+    quote: "I used to cringe reading the blogs our old agency posted under my name, half of it wasn't even clinically right. Now every article comes back with a dentist's sign-off before it publishes. I finally stopped proofreading my own marketing.",
+    name: "Dr. A. Rivera, DDS",
+    role: "General & Cosmetic Dentistry · Brooklyn, NY)",
   },
 ]
