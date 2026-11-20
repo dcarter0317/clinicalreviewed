@@ -1,0 +1,107 @@
+@theme {
+  /* ---------- Color ---------- */
+  --color-surface-page: #ffffff;
+  --color-surface-muted: #f7fbfd;
+  --color-surface-tint: #eaf6f9;
+  --color-surface-tint-deep: #dff2f7;
+  --color-surface-warm: #fff4e3;
+
+  --color-brand-primary: #2d9cb4;
+  --color-brand-primary-dark: #1b6e82;
+  --color-brand-primary-light: #55bbd1;
+
+  --color-ink-navy: #173f4c;
+  --color-ink-body: #3a5560;
+
+  --color-accent-sun: #ffb84d;
+  --color-accent-sun-hover: #f5a93a;
+  --color-accent-coral: #f58a6f;
+
+  --color-border-line: #d9eaf0;
+
+  --color-icon-tint-1: #e3f4f8;
+  --color-icon-tint-2: #fff0dc;
+  --color-icon-tint-3: #fde9e3;
+  --color-icon-tint-4: #e8f5e9;
+
+  --color-footer-ink: #b9d6df;
+  --color-footer-border: #2e5765;
+  --color-footer-muted: #8fb4bf;
+
+  --color-white: #ffffff;
+
+  /* ---------- Type: families ---------- */
+  --font-heading: "Nunito Variable", "Nunito", sans-serif;
+  --font-body: "Nunito Sans Variable", "Nunito Sans", sans-serif;
+
+  /* ---------- Type: Display (font-heading) ---------- */
+  --text-hero-h1: clamp(2.2rem, 4.4vw, 3.35rem);
+  --text-hero-h1--line-height: 1.2;
+  --text-hero-h1--font-weight: 900;
+
+  --text-section-h2: clamp(1.8rem, 3vw, 2.4rem);
+  --text-section-h2--line-height: 1.2;
+  --text-section-h2--font-weight: 900;
+
+  /* ---------- Type: Heading (font-heading) ---------- */
+  --text-h3: 1.4rem;
+  --text-h3--line-height: 1.2;
+  --text-h3--font-weight: 900;
+
+  --text-h4: 1.05rem;
+  --text-h4--line-height: 1.2;
+  --text-h4--font-weight: 800;
+
+  --text-logo-wordmark: 1.3rem;
+  --text-logo-wordmark--line-height: 1.15;
+  --text-logo-wordmark--font-weight: 900;
+
+  --text-eyebrow-label: 0.85rem;
+  --text-eyebrow-label--line-height: 1.2;
+  --text-eyebrow-label--font-weight: 800;
+
+  /* ---------- Type: Body (font-body) ---------- */
+  --text-body-lead: 1.12rem;
+  --text-body-lead--line-height: 1.7;
+  --text-body-lead--font-weight: 400;
+
+  --text-body-base: 1rem;
+  --text-body-base--line-height: 1.7;
+  --text-body-base--font-weight: 400;
+
+  --text-label-strong: 0.95rem;
+  --text-label-strong--line-height: 1.4;
+  --text-label-strong--font-weight: 700;
+
+  --text-caption: 0.86rem;
+  --text-caption--line-height: 1.5;
+  --text-caption--font-weight: 400;
+
+  /* ---------- Spacing (p-md, gap-lg, py-section-md, ...) ---------- */
+  --spacing-xs: 8px;
+  --spacing-sm: 12px;
+  --spacing-md: 16px;
+  --spacing-lg: 22px;
+  --spacing-xl: 28px;
+  --spacing-2xl: 36px;
+  --spacing-3xl: 48px;
+  --spacing-section-sm: 56px;
+  --spacing-section-md: 76px;
+  --spacing-section-lg: 90px;
+
+  /* ---------- Radius ---------- */
+  --radius-pill: 100px;
+  --radius-card: 22px;
+  --radius-chip: 16px;
+  --radius-panel-lg: 28px;
+  --radius-panel-xl: 32px;
+}
+
+/* HERO WAVE */
+.wave {
+  display: block;
+  width: 100%;
+  height: 70px;
+  margin-top: -70px;
+  position: relative;
+}
