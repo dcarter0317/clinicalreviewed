@@ -4,7 +4,7 @@ import { defineConfig } from 'vite'
 
 // https://vite.dev/config/
 export default defineConfig({
-  // Served from a subfolder in production (https://www.dcartdevelopment.com/cilentreviewed/).
+  // Served from a subfolder in production (https://www.dcartdevelopment.com/clinicalreviewed/).
   base: process.env.VITE_BASE ?? '/',
   plugins: [react(), tailwindcss()],
   server: {
