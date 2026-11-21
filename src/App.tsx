@@ -7,6 +7,8 @@ import Testimonials from './layout/testimonials';
 import Plans from './layout/plans';
 import Contact from './layout/contact';
 import Styleguide from './styleguide/styleguide';
+import Welcome from './layout/welcome';
+import Footer from './layout/footer';
 
 function App() {
   // Tiny router: /styleguide (or /#/styleguide) shows the component reference.
@@ -24,6 +26,8 @@ function App() {
       <Testimonials />
       <Plans /> 
       <Contact />
+      <Welcome />
+      <Footer />
     </>
   )
 }

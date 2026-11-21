@@ -18,7 +18,7 @@ export default function NavBar() {
 
   return (
     <header className="navbar relative bg-surface-tint">
-      <div className="flex items-center justify-between md:px-8 p-4">
+      <div className="mx-auto flex w-full max-w-6xl items-center justify-between p-4 md:px-8">
         <div className="flex gap-2">
           <img src={logoMark} alt="Clinician Reviewed" width={40} height={40} className="logo-mark" />
           <div className="logo text-left flex flex-col">

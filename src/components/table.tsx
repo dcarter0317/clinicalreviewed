@@ -142,7 +142,7 @@ export default function Table<Row>({
                       type="button"
                       onClick={() => toggleSort(col.key)}
                       className={cx(
-                        'inline-flex w-full cursor-pointer items-center gap-1.5 rounded-pill font-[inherit] text-[length:inherit] font-[inherit] text-inherit hover:text-brand-primary-dark',
+                        'inline-flex w-full cursor-pointer items-center gap-1.5 rounded-pill font-[inherit] text-[length:inherit] text-inherit hover:text-brand-primary-dark',
                         'focus-visible:outline-3 focus-visible:outline-offset-3 focus-visible:outline-accent-sun',
                         justifyClasses[align],
                       )}

@@ -1,4 +1,4 @@
-import { faArrowLeft, faArrowRight, faCalendarCheck, faCheckDouble, faEnvelope, faExclamation, faLeaf, faMobileScreen, faNewspaper, faPenToSquare, faStar, faTooth } from '@fortawesome/free-solid-svg-icons'
+import { faArrowLeft, faArrowRight, faCalendarCheck, faLocationDot, faPhone, faCheckDouble, faEnvelope, faExclamation, faLeaf, faMobileScreen, faNewspaper, faPenToSquare, faStar, faTooth } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import Button, { OutlineButton, PrimaryButton, SunButton } from '../components/button'
 import Badge, { CheckBadge, Kicker, StatusPill, Tag } from '../components/badge'
@@ -6,8 +6,11 @@ import ServiceCard, { ServiceCardGrid } from '../components/service-card'
 import PlanCard, { PlanCardGrid } from '../components/plan-card'
 import TestimonialCard, { TestimonialCardGrid } from '../components/testimonial-card'
 import PosterCard from '../components/poster-card'
+import ContactCard, { ContactCardGroup } from '../components/contact-card'
+import type { ContactItem } from '../components/contact-card'
 import { testimonials } from '../data/testimonials'
 import { poster } from '../data/poster'
+import { contactCards } from '../data/contact'
 import { services } from '../data/services'
 import { plans } from '../data/plans'
 import Accordion from '../components/accordion'
@@ -35,6 +38,7 @@ const nav = [
   ['plan-cards', 'Plan cards'],
   ['testimonial-cards', 'Testimonial cards'],
   ['poster-cards', 'Poster card'],
+  ['contact-cards', 'Contact cards'],
   ['tables', 'Tables'],
   ['table-parts', 'Table elements'],
   ['accordions', 'Accordions'],
@@ -62,6 +66,18 @@ const demoColumns: TableColumn<DemoRow>[] = [
     header: 'Status',
     render: (r) => <StatusPill tone={r.status === 'Verified' ? 'primary' : 'sun'}>{r.status}</StatusPill>,
   },
+]
+
+const demoLines: ContactItem[] = [
+  { type: 'line', id: 'location', icon: faLocationDot, text: 'New York, NY — working with practices in all 50 states' },
+  { type: 'line', id: 'phone', icon: faPhone, text: '(212) 555-0142', href: 'tel:+12125550142' },
+  { type: 'line', id: 'email', icon: faEnvelope, text: 'hello@clinicianreviewed.com', href: 'mailto:hello@clinicianreviewed.com' },
+]
+const demoHours: ContactItem[] = [
+  { type: 'detail', id: 'mon-thu', label: 'Monday – Thursday', value: '9:00AM – 6:00PM ET' },
+  { type: 'detail', id: 'fri', label: 'Friday', value: '9:00AM – 5:00PM ET' },
+  { type: 'detail', id: 'sat', label: 'Saturday', value: 'By appointment' },
+  { type: 'detail', id: 'sun', label: 'Sunday', value: 'Closed' },
 ]
 
 const colors: Array<[group: string, swatches: Array<[token: string, hex: string]>]> = [
@@ -470,6 +486,74 @@ export default function Styleguide() {
               ['footerLabel', 'ReactNode', 'Bold line under the dashed divider. Optional.'],
               ['footerBadge', 'ReactNode', 'Status pill with check-double icon. Optional.'],
               ['footerBadgeTone', "'primary' | 'sun'", 'Pill color. Default primary.'],
+              ['className', 'string', 'Extra classes, appended last.'],
+            ]}
+          />
+        </Section>
+
+        <Section id="contact-cards" title="Contact cards" intro="A titled panel for contact details or key/value facts, described as data. Two item types: line (icon + text, optionally a link) and detail (label left, value right, dashed dividers). Three tones: tint, dark and white. An optional action renders a Button. Source: components/contact-card.tsx.">
+          <Specimen
+            title="Tint with action (default)"
+            note="Line items with icons; phone and email are links. The action is a primary Button pinned to the bottom of the card."
+            code={`const items: ContactItem[] = [\n  { type: 'line', id: 'location', icon: faLocationDot, text: 'New York, NY — working with practices in all 50 states' },\n  { type: 'line', id: 'phone', icon: faPhone, text: '(212) 555-0142', href: 'tel:+12125550142' },\n  { type: 'line', id: 'email', icon: faEnvelope, text: 'hello@clinicianreviewed.com', href: 'mailto:hello@clinicianreviewed.com' },\n]\n\n<ContactCard title="Our Studio" items={items} action={{ label: 'Book a Free Consult', href: '#contact' }} />`}
+          >
+            <div className="w-full max-w-[36rem]"><ContactCard title="Our Studio" items={demoLines} action={{ label: 'Book a Free Consult', href: '#contact' }} /></div>
+          </Specimen>
+
+          <Specimen
+            title="Dark with detail rows"
+            note="Label/value rows with dashed dividers. Use tone=&quot;dark&quot; next to a tint card for contrast."
+            code={`const hours: ContactItem[] = [\n  { type: 'detail', id: 'mon-thu', label: 'Monday – Thursday', value: '9:00AM – 6:00PM ET' },\n  { type: 'detail', id: 'fri', label: 'Friday', value: '9:00AM – 5:00PM ET' },\n  { type: 'detail', id: 'sat', label: 'Saturday', value: 'By appointment' },\n  { type: 'detail', id: 'sun', label: 'Sunday', value: 'Closed' },\n]\n\n<ContactCard tone="dark" title="Response Hours" items={hours} />`}
+          >
+            <div className="w-full max-w-[36rem]"><ContactCard tone="dark" title="Response Hours" items={demoHours} /></div>
+          </Specimen>
+
+          <Specimen
+            title="White"
+            note="Border-line border instead of a fill. Quietest tone, good on a tinted section background."
+            code={`<ContactCard tone="white" title="Our Studio" items={items} action={{ label: 'Book a Free Consult', href: '#contact', variant: 'outline' }} />`}
+          >
+            <div className="w-full max-w-[36rem]"><ContactCard tone="white" title="Our Studio" items={demoLines} action={{ label: 'Book a Free Consult', href: '#contact', variant: 'outline' }} /></div>
+          </Specimen>
+
+          <Specimen
+            title="Dark with a sun action"
+            note="On dark, use the sun variant for the single most-wanted action."
+            code={`<ContactCard tone="dark" title="Our Studio" items={items} action={{ label: 'Book a Free Consult', href: '#contact', variant: 'sun' }} />`}
+          >
+            <div className="w-full max-w-[36rem]"><ContactCard tone="dark" title="Our Studio" items={demoLines} action={{ label: 'Book a Free Consult', href: '#contact', variant: 'sun' }} /></div>
+          </Specimen>
+
+          <Specimen
+            title="Alignment"
+            note="align sets the title, lines and action together: left (default), center or right. Centered and right-aligned detail rows stack the label above the value."
+            code={`<ContactCard align="left" title="Our Studio" items={items} action={{ label: 'Book a Free Consult', href: '#contact' }} />\n<ContactCard align="center" tone="white" title="Our Studio" items={items} action={{ label: 'Book a Free Consult', href: '#contact' }} />\n<ContactCard align="right" tone="dark" title="Response Hours" items={hours} />`}
+          >
+            <div className="grid w-full gap-xl lg:grid-cols-3">
+              <ContactCard align="left" title="Our Studio" items={demoLines} action={{ label: 'Book a Free Consult', href: '#contact' }} />
+              <ContactCard align="center" tone="white" title="Our Studio" items={demoLines} action={{ label: 'Book a Free Consult', href: '#contact' }} />
+              <ContactCard align="right" tone="dark" title="Response Hours" items={demoHours} />
+            </div>
+          </Specimen>
+
+          <Specimen
+            title="Config-driven group"
+            note="ContactCardGroup renders one card per entry, side by side from md up, equal height. Content lives in data/contact.tsx."
+            code={`<ContactCardGroup cards={contactCards} />`}
+          >
+            <ContactCardGroup className="w-full" cards={contactCards} />
+          </Specimen>
+
+          <PropsTable
+            rows={[
+              ['title', 'ReactNode', 'Required. Card heading.'],
+              ['items', 'ContactItem[]', "Required. line: id, icon, text, href?. detail: id, label, value."],
+              ['tone', "'tint' | 'dark' | 'white'", 'Surface and text colors. Default tint. Wrappers: ContactCardTint, ContactCardDark, ContactCardWhite.'],
+              ['action', '{ label, href, variant?, trailingIcon? }', 'Optional Button under the list. variant is a Button variant, default primary.'],
+              ['align', "'left' | 'center' | 'right'", 'Text alignment for title, items and action. Default left. Also a default on ContactCardGroup.'],
+              ['headingAs', "'h2' | 'h3' | 'h4'", 'Heading element. Default h3.'],
+              ['cards', 'ContactCardEntry[]', 'ContactCardGroup only. Each entry: id plus any ContactCard prop.'],
+              ['columns', '1 | 2 | 3', 'ContactCardGroup only. Columns at lg. Default: card count, max 3.'],
               ['className', 'string', 'Extra classes, appended last.'],
             ]}
           />

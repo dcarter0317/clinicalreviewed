@@ -9,8 +9,8 @@ export default function Testimonials() {
             <h2 className="heading-section mb-3">What practices say about working with us</h2>
             <p className="px-1">Concept placeholders: your founding practices' words will live here.</p>
           </div>
-        <section id="testimonials" className="testimonials px-xl pt-0 pb-section-md">
-          <div className="testimonials-content">
+        <section id="testimonials" className="testimonials px-4 md:px-8 pt-0 pb-section-md">
+          <div className="testimonials-content mx-auto max-w-5xl">
             <TestimonialCardGrid items={testimonials} />
           </div>
         </section>

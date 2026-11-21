@@ -3,7 +3,8 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 export default function Topbar() {
   return (
-    <header className="topbar text-sm flex items-center justify-around md:justify-between md:px-8 bg-ink-navy text-surface-tint-deep p-4">
+    <header className="topbar bg-ink-navy text-surface-tint-deep text-sm">
+     <div className="mx-auto flex w-full max-w-6xl items-center justify-around p-4 md:justify-between md:px-8">
       <div className="hidden md:block">
         <p>
           <FontAwesomeIcon icon={faLocationDot} aria-hidden="true" className="mr-2" />
@@ -20,6 +21,7 @@ export default function Topbar() {
           hello@clinicianreviewed.com
         </p>
       </div>
+     </div>
     </header>
   )
 }

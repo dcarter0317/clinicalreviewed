@@ -81,7 +81,7 @@ export function TableBody({ className, ...rest }: ComponentPropsWithoutRef<'tbod
       className={cx(
         '[&>tr]:hover:bg-surface-tint/60',
         // zebra stripes, switched on by <TableFrame striped>
-        'group-data-[striped]/table:[&>tr:nth-child(even)]:bg-surface-muted',
+        'group-data-striped/table:[&>tr:nth-child(even)]:bg-surface-muted',
         className,
       )}
     />
