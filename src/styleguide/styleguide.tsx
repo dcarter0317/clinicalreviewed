@@ -120,7 +120,7 @@ export default function Styleguide() {
               <a key={id} href={`#${id}`} className="text-brand-primary-dark hover:underline">{label}</a>
             ))}
           </nav>
-          <a href="/" className="ml-auto text-label-strong text-brand-primary-dark hover:underline"><FontAwesomeIcon icon={faArrowLeft} className="mr-1.5" />Back to site</a>
+          <a href={import.meta.env.BASE_URL} className="ml-auto text-label-strong text-brand-primary-dark hover:underline"><FontAwesomeIcon icon={faArrowLeft} className="mr-1.5" />Back to site</a>
         </div>
       </header>
 

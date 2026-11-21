@@ -12,7 +12,7 @@ import Footer from './layout/footer';
 
 function App() {
   // Tiny router: /styleguide (or /#/styleguide) shows the component reference.
-  if (window.location.pathname === '/styleguide' || window.location.hash === '#/styleguide') {
+  if (window.location.pathname === `${import.meta.env.BASE_URL}styleguide` || window.location.hash === '#/styleguide') {
     return <Styleguide />
   }
 
